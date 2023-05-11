@@ -1,0 +1,13 @@
+declare function calcTotalPrice(price: number): number;
+declare const priceOfToy: number;
+declare const discountedPrice: number;
+declare const calTotalPrice: (price: number) => number;
+declare const priceOfItem: number;
+declare const DP: number;
+declare function processData(data: string | number): string | number;
+declare const actualprocesseddata: string | number;
+declare function swap<T>(a: T, b: T): void;
+declare let x: number;
+declare let y: number;
+declare let str1: string;
+declare let str2: string;
