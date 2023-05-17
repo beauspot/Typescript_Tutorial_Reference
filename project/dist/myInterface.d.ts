@@ -7,4 +7,11 @@ interface User__ {
     startBasics(): string;
     getCoupons(couponName: string, value: number): number;
 }
+interface User__ {
+    githubID: string;
+}
+interface Admin extends User__ {
+    role: "admin" | "user" | "super_admin";
+}
 declare const hitesh: User__;
+declare const admin_user: Admin;
