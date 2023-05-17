@@ -1,0 +1,97 @@
+"use strict";
+/* // Creating a user in Typescript
+class UserClass {
+  // declaring the properties before initialising them with the "this" keyword.
+  name: string;
+  public email: string;
+  age: number;
+  private city?: string;
+  constructor(name: string, email: string, age: number) {
+    this.name = name;
+    this.email = email;
+    this.age = age;
+  }
+}
+
+const userBeau = new UserClass("beau Iyere", "beauspot@outlook.com", 26); */
+// Shortcut to declaring classes in Typescript
+class UserClass__ {
+    constructor(name, email, age, userID) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.userID = userID;
+        this.city = "Lagos";
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.userID = userID;
+    }
+    // having a private method
+    deleteToken(token) {
+        if (token.length > 0) {
+            console.log(`Token Deleted: ${token}`);
+        }
+    }
+}
+// Getters and setters for classes
+class _Person_ {
+    constructor(_name, _age, _email, _token) {
+        this._name = _name;
+        this._age = _age;
+        this._email = _email;
+        this._token = _token;
+        this._name = _name;
+        this._age = _age;
+        this._email = _email;
+        this._token = _token;
+    }
+    // using the getter
+    get name() {
+        return this._name;
+    }
+    // using the setter
+    set name(value) {
+        if (value.length > 0) {
+            this._name = value;
+        }
+        else {
+            throw new Error("Name must be at least 1 character long");
+        }
+    }
+}
+// Inheritance in Typescript
+class _Animal {
+    constructor(name, breed, sound) {
+        this.name = name;
+        this.breed = breed;
+        this.sound = sound;
+        this.name = name;
+        this.breed = breed;
+        this.sound = sound;
+    }
+    // method in a TS class
+    move(distance) {
+        return `${this.name} moves ${distance} meters`;
+    }
+    // adding a setter
+    set getSound(makeSound) {
+        if (makeSound)
+            this.sound = makeSound;
+    }
+}
+// actual inheritance in Typescript
+class Dog extends _Animal {
+    constructor(name, breed, sound, hasTail) {
+        super(name, breed, sound);
+        this.name = name;
+        this.breed = breed;
+        this.sound = sound;
+        this.hasTail = hasTail;
+        this.hasTail = hasTail;
+    }
+    // method in a TS inherited class
+    bark() {
+        console.log("woof woof");
+    }
+}
