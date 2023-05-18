@@ -69,8 +69,32 @@ printMainData(true, [
     true,
     { name: "Beau", age: 26, isregistered: true },
 ]);
-;
 const user_ = {
     name: "Beau Iyere",
-    rollNo: 12345
+    rollNo: 12345,
 };
+// more on interfaces
+function getSearchProducts(products) {
+    // perform some DB operations
+    const myIndex = 3;
+    return products[myIndex];
+}
+// Using Arrow functions to define a generic
+const getMoreSearchProducts = (products) => {
+    // perform some DB operations
+    let index = 4;
+    return products[index];
+};
+function AnotherFunction(ValOne, ValueTwo) {
+    return {
+        ValOne: ValOne,
+        ValueTwo: ValueTwo,
+    };
+}
+AnotherFunction(3, 4);
+function anotherFunction(ValOne, ValueTwo) {
+    return {
+        ValOne: ValOne,
+        ValueTwo: ValueTwo,
+    };
+}

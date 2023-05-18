@@ -91,11 +91,48 @@ printMainData(true, [
 
 // Using Generics with interface
 interface User_Data<X, Y> {
-    name: X;
-    rollNo: Y;
-};
+  name: X;
+  rollNo: Y;
+}
 
 const user_: User_Data<string, number> = {
-    name: "Beau Iyere",
-    rollNo: 12345
+  name: "Beau Iyere",
+  rollNo: 12345,
+};
+
+// more on interfaces
+function getSearchProducts<T>(products: T[]): T {
+  // perform some DB operations
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+// Using Arrow functions to define a generic
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  // perform some DB operations
+  let index = 4;
+  return products[index];
+};
+
+function AnotherFunction<T, U extends number>(ValOne: T, ValueTwo: U): object {
+  return {
+    ValOne: ValOne,
+    ValueTwo: ValueTwo,
+  };
+}
+
+AnotherFunction(3, 4);
+
+
+interface DataBase_ {
+  connection: string,
+  username: string,
+  password: string,
+}
+
+function anotherFunction<T, U extends DataBase_>(ValOne: T, ValueTwo: U): object {
+  return {
+    ValOne: ValOne,
+    ValueTwo: ValueTwo,
+  };
 }
