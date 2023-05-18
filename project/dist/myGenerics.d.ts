@@ -38,3 +38,12 @@ interface User_Data<X, Y> {
     rollNo: Y;
 }
 declare const user_: User_Data<string, number>;
+declare function getSearchProducts<T>(products: T[]): T;
+declare const getMoreSearchProducts: <T>(products: T[]) => T;
+declare function AnotherFunction<T, U extends number>(ValOne: T, ValueTwo: U): object;
+interface DataBase_ {
+    connection: string;
+    username: string;
+    password: string;
+}
+declare function anotherFunction<T, U extends DataBase_>(ValOne: T, ValueTwo: U): object;
